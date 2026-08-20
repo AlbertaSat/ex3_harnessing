@@ -18,7 +18,7 @@ This is the repository for Ex-Alta 3's harness documentation. This repo uses Wir
 If making any changes to the .yml files, make sure to recompile the images in the harness' folder to be the up to date version. 
 - You can run `wireviz ./harnessess/EX3-0XX` from the repo's root directory
 
-After all changes have been made, you will need to submit a merge request to push your changes to the AlbertaSat GitHub. Changes will be merged after they have been reviewed.
+This repo has branch protection on the main branch. This means that any changes will need to be done on a new branch, and after all changes have been made, you will need to submit a merge request to merge your changes to the main branch in the AlbertaSat GitHub. Changes will be merged after they have been reviewed by workspace owners.
 
 
 
