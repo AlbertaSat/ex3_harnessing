@@ -1,0 +1,29 @@
+connectors:
+  P804:
+    pincount: 4
+    type: Molex PicoLock 1.5mm Pitch
+    subtype: Female
+    pinlabels: [VStarD+, VStarD+, VStarD-, VStarD-]
+    notes: Starboard Hyperion
+
+
+  SP2:
+    pincount: 4
+    type: Molex PicoLock 1.5mm Pitch
+    subtype: Female
+    pinlabels: [V+, V+, PGND, PGND]
+    notes: EPS
+
+cables:
+  W1:
+    wirecount: 4
+    length: 26 cm
+    gauge: 26 AWG
+    show_equiv: true
+    notes: Ribbon
+
+connections:
+  -
+    - P804: [1-4]
+    - W1: [1-4]
+    - SP2: [1-4]
