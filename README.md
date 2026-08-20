@@ -20,6 +20,3 @@ If making any changes to the .yml files, make sure to recompile the images in th
 
 This repo has branch protection on the main branch. This means that any changes will need to be done on a new branch, and after all changes have been made, you will need to submit a merge request to merge your changes to the main branch in the AlbertaSat GitHub. Changes will be merged after they have been reviewed by workspace owners.
 
-
-
-
