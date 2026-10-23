@@ -18,7 +18,7 @@ connectors:
 cables:
   W1:
     wirecount: 8
-    colors: [ OG, YE, VT, GY, BK, RD, BN, GN,]
+    colors: [ OG, YE, RD, BK, VT, GY, BN, GN,]
     length: 32 cm
     gauge: 26 AWG
     show_equiv: true
