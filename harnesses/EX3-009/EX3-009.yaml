@@ -1,0 +1,31 @@
+connectors:
+  P801:
+    pincount: 8
+    type: Molex PicoLock 1.5mm Pitch
+    subtype: Female
+    pinlabels: [SDA, SCL, 3V3, GND, SwitchDeployable_P, IR_SENSE_OUT_Port, PortKnifeReturn, VKnife]
+    notes: Starboard Hyperion
+
+
+  P502:
+    pincount: 8
+    type: Molex PicoLock 1.5mm Pitch
+    subtype: Female
+    pins: [8,7,6,5,4,3,2,1]
+    pinlabels: [SCL, SDA, 3V3, GND, SwitchDeployable_P, IR_SENSE_OUT_Port, PortKnifeReturn, STACK_VKnife]
+    notes: OBC
+
+cables:
+  W1:
+    wirecount: 8
+    colors: [ OG, YE, VT, GY, BK, RD, BN, GN,]
+    length: 32 cm
+    gauge: 26 AWG
+    show_equiv: true
+    notes: Ribbon
+
+connections:
+  -
+    - P801: [1-8]
+    - W1: [1-8]
+    - P502: [7, 8, 6, 5, 4, 3, 2, 1]
