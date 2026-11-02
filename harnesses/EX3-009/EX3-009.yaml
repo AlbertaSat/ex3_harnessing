@@ -4,7 +4,7 @@ connectors:
     type: Molex PicoLock 1.5mm Pitch
     subtype: Female
     pinlabels: [SDA, SCL, 3V3, GND, SwitchDeployable_P, IR_SENSE_OUT_Port, PortKnifeReturn, VKnife]
-    notes: Starboard Hyperion
+    notes: Port Hyperion
 
 
   P502:
