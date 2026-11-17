@@ -1,0 +1,49 @@
+connectors:
+  template1: &picolock_4
+    type: Molex Pico-Lock
+    pins: [1, 2, 3, 4]
+
+  template2: &picolock_4_rev
+    type: Molex Pico-Lock
+    pins: [4, 3, 2, 1]
+
+  imgtemplates:
+    image: &picolock_down_4_l
+      src: ../../connector_img/picolock/picolock-down-4-l.png
+      height: 100
+    image: &picolock_down_4_r
+      src: ../../connector_img/picolock/picolock-down-4-r.png
+      height: 100
+    image: &picolock_up_4_l
+      src: ../../connector_img/picolock/picolock-up-4-l.png
+      height: 100
+    image: &picolock_up_4_r
+      src: ../../connector_img/picolock/picolock-up-4-r.png
+      height: 100
+
+  ANITIRAM HYP P802:
+    <<: *picolock_4
+    pinlabels: [PV+, PV+, PV-, PV-]
+    image: 
+      <<: *picolock_down_4_l
+    notes: CONFIRM ORIENTATION ON HM IS CORRECT.
+  
+  EPS SP6: 
+    <<: *picolock_4
+    pinlabels: [V+, V+, PGND, PGND]
+    image: 
+      <<: *picolock_up_4_r
+    notes: CONFIRM ORIENTATION ON HM
+  
+cables:
+  Ribbon Cable:
+    wirecount: 4
+    color_code: DIN
+    show_wirecount: false
+    length: 100000 mm
+
+connections:
+  - 
+    - ANITIRAM HYP P802: [1-4]
+    - Ribbon Cable: [1-4]
+    - EPS SP6: [1-4]

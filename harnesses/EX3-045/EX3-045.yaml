@@ -1,0 +1,23 @@
+connectors:
+  Patch Antenna:
+    type: SMA Straight Coax
+    # style: simple
+    pincount: 1
+
+  ASB J100:
+    type: MMCX Right-Angle Coax
+    # style: simple
+    pincount: 1
+
+cables:
+  Coax Cable:
+    wirecount: 1
+    color_code: DIN
+    show_wirecount: false
+    length: 100000 mm
+
+connections:
+  - 
+    - Patch Antenna: [1]
+    - Coax Cable: [1]
+    - ASB J100: [1]

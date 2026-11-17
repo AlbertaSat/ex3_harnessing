@@ -1,0 +1,23 @@
+connectors:
+  ES UHF Antenna:
+    type: MCX Straight Coax
+    # style: simple
+    pincount: 1
+
+  ASB J102:
+    type: MMCX Right-Angle Coax
+    # style: simple
+    pincount: 1
+
+cables:
+  Coax Cable:
+    wirecount: 1
+    color_code: DIN
+    show_wirecount: false
+    length: 100000 mm
+
+connections:
+  - 
+    - ES UHF Antenna: [1]
+    - Coax Cable: [1]
+    - ASB J102: [1]
