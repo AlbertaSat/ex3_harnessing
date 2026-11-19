@@ -1,0 +1,54 @@
+connectors:
+  template1: &picolock_8 
+    type: Molex Pico-Lock
+    pins: [1, 2, 3, 4, 5, 6, 7, 8]
+
+  template2: &picolock_8_rev
+    type: Molex Pico-Lock
+    pins: [8, 7, 6, 5, 4, 3, 2, 1]
+
+  imgtemplates:
+    image: &picolock_down_8_l
+      src: ../../connector_img/picolock/picolock-down-8-l.png
+      height: 100
+    image: &picolock_down_8_r
+      src: ../../connector_img/picolock/picolock-down-8-r.png
+      height: 100
+    image: &picolock_up_8_l
+      src: ../../connector_img/picolock/picolock-up-8-l.png
+      height: 100
+    image: &picolock_up_8_r
+      src: ../../connector_img/picolock/picolock-up-8-r.png
+      height: 100
+    image: &bend
+      src: ../../connector_img/bends/8pin_bend_lengths.png
+      height: 200  
+
+  EPS I1:
+    <<: *picolock_8
+    pinlabels: [KS, KS_RESET, CANL, CANH, GND, UBAT, CHARG, PGND]
+    image: 
+      <<: *picolock_down_8_l
+  
+  HERACLES P204:
+    <<: *picolock_8
+    pinlabels: [KS, KS_RESET, CAN_N, CAN_P, GND_EPS, VBATT, CHARG, PGND_EPS]
+    image: 
+      <<: *bend
+    notes: |
+      Split from fused section, curve ribbon cable 90°
+      Length from split on Pin 1 Side: XX mm
+      Length from split on Pin 6 Side: (XX) mm
+
+cables:
+  Ribbon Cable:
+    wirecount: 8
+    color_code: DIN
+    show_wirecount: false
+    length: 100000 mm
+
+connections:
+  - 
+    - EPS I1: [1-8]
+    - Ribbon Cable: [1-8]
+    - HERACLES P204: [1-8]
