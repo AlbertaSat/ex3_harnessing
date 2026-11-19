@@ -1,0 +1,28 @@
+connectors:
+  template1: &hirose_df65
+    type: Hirose DF65
+    pincount: 4
+
+  Iris SWIR:
+    <<: *hirose_df65
+    pinlabels: [5V, GND, USB_N, USB_P]
+    notes: ADD CONNECTOR IMAGE.
+  Daedalus P1300:
+    <<: *hirose_df65
+    pinlabels: [5V, GND, USB_P, USB_N]
+    notes: ADD CONNECTOR IMAGE.
+
+cables:
+  Ribbon Cable:
+    wirecount: 4
+    notes: All wires separated.
+    show_wirecount: false
+    length: 100000 mm
+    color_code: DIN
+
+connections:
+  - 
+    - Iris SWIR: [1-4]
+    - Ribbon Cable: [1, 2, 3, 4]
+    - Daedalus P1300: [1, 2, 4, 3]
+

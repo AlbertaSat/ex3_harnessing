@@ -1,0 +1,21 @@
+connectors:
+  HTX-s RF Connector:
+    type: SMA Right-Angle Coax
+    pincount: 1
+
+  ASB J101:
+    type: MMCX Right-Angle Coax
+    pincount: 1
+
+cables:
+  Coax Cable:
+    wirecount: 1
+    color_code: DIN
+    show_wirecount: false
+    length: 100000 mm
+
+connections:
+  - 
+    - HTX-S RF Connector: [1]
+    - Coax Cable: [1]
+    - ASB J101: [1]

@@ -1,0 +1,56 @@
+connectors:
+  template1: &picolock_6
+    type: Molex Pico-Lock
+    pins: [1, 2, 3, 4, 5, 6]
+
+  template2: &picolock_6_rev
+    type: Molex Pico-Lock
+    pins: [6, 5, 4, 3, 2, 1]
+
+  imgtemplates:
+    image: &picolock_down_6_l
+      src: ../../connector_img/picolock/picolock-down-6-l.png
+      height: 100
+    image: &picolock_down_6_r
+      src: ../../connector_img/picolock/picolock-down-6-r.png
+      height: 100
+    image: &picolock_up_6_l
+      src: ../../connector_img/picolock/picolock-up-6-l.png
+      height: 100
+    image: &picolock_up_6_r
+      src: ../../connector_img/picolock/picolock-up-6-r.png
+      height: 100
+    image: &bend
+      src: ../../connector_img/bends/6pin_bend_lengths.png
+      height: 200  
+
+  ASB P100:
+    <<: *picolock_6
+    pinlabels: [RELEASE B, RELEASE A, GND, SDA, SCL, 5V]
+    image:
+      <<: *picolock_down_6_l
+
+  UHF Antenna Release:
+    <<: *picolock_6
+    pinlabels: [RELEASE B, RELEASE A, GND, SDA, SCL, 5V]
+    image:
+      <<: *bend
+    notes: |
+      Split from fused section, curve ribbon cable 90°
+      Length from split on Pin 1 Side: XX mm
+      Length from split on Pin 6 Side: (XX) mm
+    
+cables:
+  Fused Ribbon Cable:
+    wirecount: 6
+    color_code: DIN
+    show_wirecount: false
+    notes: | 
+      Fused Cable Length: XX mm
+      Total Length Needed: XX mm
+
+connections:
+  - 
+    - ASB P100: [1-6]
+    - Fused Ribbon Cable: [1, 2, 3, 4, 5, 6]
+    - UHF Antenna Release: [1-6]
